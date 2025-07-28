@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+:root{
+    --green:hsl(75, 94%, 57%);
+    --white:hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+}
+*{
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Grey-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card-container{
+    background-color: var(--Grey-800);
+    margin: 100px 0;
+    border-radius: 20px;
+    text-align: center;
+    min-height: 500px;
+    min-width: 350px;
+    box-shadow: 10px 10px 5px black;
+}
+.card-container:hover{
+    box-shadow: 2px 2px 5px var(--green);
+}
+.card-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: 0.6s all;
+}
+.card-image:hover{
+    transform: scale(1.4);
+    box-shadow: 4px 4px 5px var(--green);
+}
+.card-title{
+    color: var(--white);
+    margin: 10px 0;
+}
+.about{
+    color: var(--green);
+    margin: 10px 0;
+}
+.description{
+    color: var(--white);
+    margin: 20px 0;
+}
+.actions{
+    color: var(--white);
+    margin: 30px 30px;
+}
+.card-list li{
+    background-color: var(--Grey-700);
+    color: var(--white);
+    margin: 10px 0;
+    padding: 10px 0;
+    border-radius: 10px;
+    list-style-type: none;
+    cursor: pointer;
+    transition: 0.5s all;
+    box-shadow: 5px 5px 5px hsl(0, 0%, 10%);
+}
+.card-list li:hover{
+    background-color: var(--green);
+    color: hsl(0, 0%, 10%);
+}
+@media only screen and (max-width:450px) {
+    .card-container{
+        margin: 40px 0;
+    }
+    .card-image{
+        margin: 20px 0;
+    }
+    .card-image:hover{
+    transform: scale(1.25);
+    }
+    .description{
+        margin: 20px 0;
+    }
+    .actions{
+        margin: 20px 20px;
+    }
+}
